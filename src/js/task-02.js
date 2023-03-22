@@ -11,13 +11,15 @@ const ingredients = [
 
 const listRef = document.querySelector('ul#ingredients')
 
-const elements = ingredients.map(ingridient => {
 
-  const ingredientsRef = document.createElement('li');
-ingredientsRef.textContent = ingridient
-ingredientsRef.classList = 'item';
 
-console.log(ingredientsRef)
+const elements = ingredients.map(ingredient => {
+const ingredientsRef = document.createElement('li');
+ingredientsRef.textContent = ingredient;
+ingredientsRef.classList.add('item') ;
+
+return ingredientsRef
 })
+console.log(elements)
 
-listRef.appendChild(elements)
+listRef.append(...elements)
