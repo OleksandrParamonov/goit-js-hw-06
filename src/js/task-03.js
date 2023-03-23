@@ -12,3 +12,19 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const listRef = document.querySelector('ul')
+console.log(listRef)
+const imgElement = images.map(({url, alt}) => {
+  listRef.insertAdjacentHTML("afterbegin", `<li class="list-task3"><img class="img" src=${url} alt=${alt}></li>`)
+})
+
+listRef.append(imgElement)
+
+
+
+
+
+
+
